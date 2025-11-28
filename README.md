@@ -13,5 +13,6 @@
 自瞄系统原项目链接：https://github.com/chenjunnn/rm_vision
 
 ### 4. SoftwareTest
-基于Junit完成的程序测试样例，运行平台为Eclipse，其中包含测试代码+测试报告\n
+基于Junit完成的程序测试样例，运行平台为Eclipse，其中包含测试代码+测试报告
+
 两段程序核心功能分别为：1. 手敲排序算法  2. 生成输入日期的下一天日期
