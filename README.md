@@ -2,11 +2,11 @@
 
 > 👋 你好！我是 **QHaoooLG**，一名热衷于底层算法与系统架构的计算机专业学生。
 > 
-> 本仓库汇总了我在 **后端开发 (Java)**、**嵌入式/算法 (C++/ROS)**、**桌面应用 (Qt)** 及 **软件测试 (JUnit)** 方向的实战项目。
+> 本仓库汇总了我在 **后端开发 (Java)**、**嵌入式/算法 (C++/ROS2)**、**桌面应用 (Qt)** 及 **软件测试 (JUnit)** 方向的实战项目。
 > 
-> 🎯 **求职意向**：互联网企业 - 软件开发工程师 / 软件测试工程师
+> 🎯 **求职意向**：互联网企业
 > 
-> 📬 **联系方式**: [您的邮箱] | 💬 **微信**: [您的微信号]
+> 📬 **联系方式**: qhaooolg@foxmail.com | 💬 **微信**: QHaoooLG
 
 ---
 
@@ -15,7 +15,7 @@
 | 领域 | 核心技术 | 工具与框架 |
 | :--- | :--- | :--- |
 | **后端开发** | Java, SpringBoot, MyBatis, MySQL | IDEA, Maven, Git |
-| **嵌入式/AI** | C++, ROS 2, OpenCV, Linux | Foxglove Studio, CMake |
+| **嵌入式/AI** | C++, ROS2, OpenCV, Linux | Foxglove Studio, CMake |
 | **桌面应用** | C++, Qt Framework | Qt Creator |
 | **软件测试** | JUnit, 黑盒/白盒测试 | Eclipse, Test Reports |
 | **文档能力** | 技术文档撰写, 部署手册 | Markdown, PDF |
@@ -37,7 +37,7 @@
 - **📂 [查看源码](./IDEA_Ticketing)**
 
 ### 2. 🤖 机器人装甲板自动瞄准系统 (Autoaim_deployment)
-> **核心标签**: `C++` `ROS 2` `OpenCV` `计算机视觉` `国家级奖项项目`
+> **核心标签**: `C++` `ROS2` `OpenCV` `计算机视觉` `国家级奖项项目`
 
 基于 ROS 2 分布式架构实现的机器人视觉自瞄系统，曾助力战队获得 **全国大学生机器人大赛一等奖**。
 - **主要功能**:
@@ -89,15 +89,6 @@
 - 🥈 **省级金奖**: “建行杯”山东省大学生创新大赛
 - *更多奖项详见简历*
 
----
-
-## 📫 联系我
-
-如果您对我的项目感兴趣，或有合作意向，欢迎随时联系！
-
-- **GitHub**: [QHaoooLG](https://github.com/QHaoooLG)
-- **Email**: [qhaooolg@foxmail.com]
-- **WeChat**: [QHaoooLG]
 
 
 
