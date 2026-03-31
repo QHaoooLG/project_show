@@ -1,0 +1,18 @@
+# WindowPet MVP 依赖包列表
+
+# 核心UI框架
+PyQt5>=5.15.0
+
+# 图像处理
+Pillow>=8.0.0
+opencv-python>=4.5.0
+
+# 数据处理
+PyYAML>=5.4.0
+sqlite3  # Python内置
+
+# 网络请求
+requests>=2.25.0
+
+# 开发工具（可选）
+pytest>=6.2.0

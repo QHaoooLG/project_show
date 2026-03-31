@@ -1,0 +1,77 @@
+# WindowPet MVP 配置文件
+
+# 应用基础配置
+app:
+  name: "WindowPet MVP"
+  version: "0.1.0"
+  debug: true
+  log_level: "INFO"
+
+# UI配置
+ui:
+  window_size:
+    width: 150
+    height: 150
+  transparency: 0.9
+  always_on_top: true
+  frameless: true
+
+# AI服务配置
+ai:
+  # DeepSeek API配置
+  deepseek:
+    api_key: ""  # 请在.env文件中设置
+    base_url: "https://api.deepseek.com"
+    model: "deepseek-chat"
+    max_tokens: 1000
+    temperature: 0.7
+  
+  # 本地备份配置
+  local_fallback:
+    enabled: true
+    simple_rules: true
+
+# 计算机视觉配置
+vision:
+  camera_index: 0
+  detection_interval: 1.0  # 秒
+  face_detection_threshold: 0.8
+  privacy_trigger_delay: 30  # 秒
+
+# 事务管理配置
+task_manager:
+  database_path: "data/tasks.db"
+  reminder_advance: 300  # 提前5分钟提醒
+  max_tasks: 1000
+
+# 出行规划配置
+travel_planner:
+  cache_duration: 3600  # 缓存1小时
+  max_attractions: 20
+  max_hotels: 10
+  timeout: 600  # 10分钟超时
+  
+  # 地图API配置
+  amap:
+    api_key: ""  # 请在.env文件中设置
+    base_url: "https://restapi.amap.com"
+
+# 数据存储配置
+database:
+  type: "sqlite"
+  path: "data/windowpet.db"
+  backup_enabled: true
+  backup_interval: 86400  # 24小时
+
+# 日志配置
+logging:
+  level: "INFO"
+  file_path: "logs/windowpet.log"
+  max_size: "10MB"
+  backup_count: 5
+
+# 安全配置
+security:
+  encrypt_sensitive_data: true
+  auto_lock_timeout: 1800  # 30分钟
+  privacy_mode_enabled: true
