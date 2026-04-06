@@ -1,0 +1,3 @@
+INSERT INTO `bookings`(`id`, `user_id`, `ticket_id`, `scenery_id`, `start_time`, `end_time`, `state`, `amount`) VALUES ('1', '1', '3', '3', '2024-12-07 20:33:56', '2024-12-07 21:34:08', '已支付', 50.00);
+INSERT INTO `bookings`(`id`, `user_id`, `ticket_id`, `scenery_id`, `start_time`, `end_time`, `state`, `amount`) VALUES ('2', '2', '5', '1', '2024-12-02 22:01:18', '2024-12-02 23:01:27', '未支付', 108.00);
+INSERT INTO `bookings`(`id`, `user_id`, `ticket_id`, `scenery_id`, `start_time`, `end_time`, `state`, `amount`) VALUES ('3', '3', '3', '2', '2024-12-04 22:41:33', '2024-12-04 22:41:39', '已支付', 59.50);

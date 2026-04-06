@@ -1,0 +1,5 @@
+INSERT INTO `user`(`id`, `pass`, `nickname`, `sex`, `phone`, `bank`, `regtime`, `power`, `name`) VALUES ('1', '202cb962ac59075b964b07152d234b70', '小齐', '男', '13864317069', '11111111', '2024-12-07', 'admin', 'qhl');
+INSERT INTO `user`(`id`, `pass`, `nickname`, `sex`, `phone`, `bank`, `regtime`, `power`, `name`) VALUES ('2', '202cb962ac59075b964b07152d234b70', '小刘', '男', '15653303083', '22222222', '2024-11-30', 'user', 'lxz');
+INSERT INTO `user`(`id`, `pass`, `nickname`, `sex`, `phone`, `bank`, `regtime`, `power`, `name`) VALUES ('3', '202cb962ac59075b964b07152d234b70', '小美', '女', '15643351346', '33333333', '2024-11-25', 'user', 'xiaomei');
+INSERT INTO `user`(`id`, `pass`, `nickname`, `sex`, `phone`, `bank`, `regtime`, `power`, `name`) VALUES ('4', '202cb962ac59075b964b07152d234b70', '小王', '男', '15500000000', '44444444', '2024-12-04', 'user', 'xiaowang');
+INSERT INTO `user`(`id`, `pass`, `nickname`, `sex`, `phone`, `bank`, `regtime`, `power`, `name`) VALUES ('5', '202cb962ac59075b964b07152d234b70', '小张', '男', '15400000000', '55555555', '2024-11-12', 'user', 'xiaozhang');

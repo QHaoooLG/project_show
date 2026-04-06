@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>门票库管理</title>
+    <meta name="description" content="门票库管理">
+    <meta name="keywords" content="门票库管理">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../../plugins/elementui/index.css">
+    <link rel="stylesheet" href="../../plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- 引入组件库 -->
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script src="../../plugins/elementui/index.js"></script>
+    <script src="../../js/axios-0.18.0.js"></script>
+    <style>
+        .datatable {
+            position: relative;
+            box-sizing: border-box;
+            -webkit-box-flex: 1;
+            width: 100%;
+            max-width: 100%;
+            font-size: 14px;
+            color: rgb(96, 98, 102);
+            overflow: hidden;
+            flex: 1 1 0%;
+        }
+        .datatable td, .datatable th {
+            padding: 12px 0;
+            min-width: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            position: relative;
+            text-align: left;
+        }
+    </style>
+</head>
+<body class="hold-transition">
+<div id="app">
+    <div class="content-header">
+        <h1>后台管理<small>门票库管理</small></h1>
+        <el-breadcrumb separator-class="el-icon-arrow-right" class="breadcrumb">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>后台管理</el-breadcrumb-item>
+            <el-breadcrumb-item>门票库管理</el-breadcrumb-item>
+        </el-breadcrumb>
+    </div>
+    <div class="app-container">
+        <div class="box">
+            <div class="filter-container">
+                <el-input placeholder="编号/描述" v-model="pagination.queryString" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter"></el-input>
+                <el-button @click="findPage()" class="dalfBut">查询</el-button>
+                <el-button type="primary" class="butT" @click="handleCreate()">新建</el-button>
+            </div>
+            <el-table size="small" current-row-key="id" :data="dataList" stripe highlight-current-row>
+                <el-table-column type="index" align="center" label="序号"></el-table-column>
+                <el-table-column prop="id" align="center" label="编号"></el-table-column>
+                <el-table-column prop="price" label="价格" align="center"></el-table-column>
+                <el-table-column prop="num" label="余量" align="center"></el-table-column>
+                <el-table-column prop="discount" label="折扣" align="center"></el-table-column>
+                <el-table-column prop="state" label="状态" align="center"></el-table-column>
+                <el-table-column prop="startDate" label="起始日期" align="center"></el-table-column>
+                <el-table-column prop="endDate" label="截止日期" align="center"></el-table-column>
+                <el-table-column prop="text" label="描述" align="center"></el-table-column>
+                <el-table-column label="操作" align="center">
+                    <template slot-scope="scope">
+                        <el-button type="primary" size="mini" @click="handleUpdate(scope.row)">编辑</el-button>
+                        <el-button size="mini" type="danger" @click="handleDelete(scope.row)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <div class="pagination-container">
+                <el-pagination
+                        class="pagiantion"
+                        @current-change="handleCurrentChange"
+                        :current-page="pagination.currentPage"
+                        :page-size="pagination.pageSize"
+                        layout="total, prev, pager, next, jumper"
+                        :total="pagination.total">
+                </el-pagination>
+            </div>
+            <!-- 新增标签弹层 -->
+            <div class="add-form">
+                <el-dialog title="新增门票" :visible.sync="dialogFormVisible">
+                    <template>
+                        <el-tabs v-model="activeName" type="card">
+                            <el-tab-pane label="基本信息" name="first">
+
+                                <el-form label-position="right" label-width="100px">
+                                    <el-row>
+                                        <el-col :span="12">
+                                            <el-form-item label="编号">
+                                                <el-input v-model="formData.id"/>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="12">
+                                            <el-form-item label="价格">
+                                                <el-input v-model="formData.price"/>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                    <el-row>
+                                        <el-col :span="12">
+                                            <el-form-item label="总量">
+                                                <el-input v-model="formData.num"/>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="12">
+                                            <el-form-item label="折扣">
+                                                <el-input v-model="formData.discount"/>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                    <el-row>
+                                        <el-col :span="12">
+                                            <el-form-item label="起始日期">
+                                                <el-date-picker v-model="formData.startDate" placeholder="选择日期">
+                                                </el-date-picker>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="12">
+                                            <el-form-item label="截止日期">
+                                                <el-date-picker v-model="formData.endDate" placeholder="选择日期">
+                                                </el-date-picker>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                    <el-row>
+                                        <el-col :span="24">
+                                            <el-form-item label="描述">
+                                                <el-input v-model="formData.text" type="textarea"></el-input>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                </el-form>
+
+                            </el-tab-pane>
+                        </el-tabs>
+                    </template>
+                    <div slot="footer" class="dialog-footer">
+                        <el-button @click="dialogFormVisible = false">取消</el-button>
+                        <el-button type="primary" @click="handleAdd()">确定</el-button>
+                    </div>
+                </el-dialog>
+            </div>
+
+            <!-- 编辑标签弹层 -->
+            <div class="add-form">
+                <el-dialog title="编辑门票" :visible.sync="dialogFormVisible4Edit">
+                    <template>
+                        <el-tabs v-model="activeName" type="card">
+                            <el-tab-pane label="基本信息" name="first">
+
+                                <el-form label-position="right" label-width="100px">
+                                    <el-row>
+                                        <el-col :span="12">
+                                            <el-form-item label="编号">
+                                                <el-input v-model="formData.id"/>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="12">
+                                            <el-form-item label="价格">
+                                                <el-input v-model="formData.price"/>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                    <el-row>
+                                        <el-col :span="12">
+                                            <el-form-item label="总量">
+                                                <el-input v-model="formData.num"/>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="12">
+                                            <el-form-item label="折扣">
+                                                <el-input v-model="formData.discount"/>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                    <el-row>
+                                        <el-col :span="12">
+                                            <el-form-item label="起始日期">
+                                                <el-date-picker v-model="formData.startDate" placeholder="选择日期">
+                                                </el-date-picker>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="12">
+                                            <el-form-item label="截止日期">
+                                                <el-date-picker v-model="formData.endDate" placeholder="选择日期">
+                                                </el-date-picker>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                    <el-row>
+                                        <el-col :span="24">
+                                            <el-form-item label="描述">
+                                                <el-input v-model="formData.text" type="textarea"></el-input>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                </el-form>
+
+                            </el-tab-pane>
+<!--                            <el-tab-pane label="检查项信息" name="second">-->
+<!--                                <div class="checkScrol">-->
+<!--                                    <table class="datatable">-->
+<!--                                        <thead>-->
+<!--                                        <tr>-->
+<!--                                            <th>选择</th>-->
+<!--                                            <th>项目编码</th>-->
+<!--                                            <th>项目名称</th>-->
+<!--                                            <th>项目说明</th>-->
+<!--                                        </tr>-->
+<!--                                        </thead>-->
+<!--                                        <tbody>-->
+<!--                                        <tr v-for="c in tableData">-->
+<!--                                            <td>-->
+<!--                                                <input :id="c.id" v-model="checkitemIds" type="checkbox" :value="c.id">-->
+<!--                                            </td>-->
+<!--                                            <td><label :for="c.id">{{c.code}}</label></td>-->
+<!--                                            <td><label :for="c.id">{{c.name}}</label></td>-->
+<!--                                            <td><label :for="c.id">{{c.remark}}</label></td>-->
+<!--                                        </tr>-->
+<!--                                        </tbody>-->
+<!--                                    </table>-->
+<!--                                </div>-->
+<!--                            </el-tab-pane>-->
+                        </el-tabs>
+                    </template>
+                    <div slot="footer" class="dialog-footer">
+                        <el-button @click="dialogFormVisible4Edit = false">取消</el-button>
+                        <el-button type="primary" @click="handleEdit()">确定</el-button>
+                    </div>
+                </el-dialog>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    var vue = new Vue({
+        el: '#app',
+        data:{
+            activeName:'first',//添加/编辑窗口Tab标签名称
+            pagination: {//分页相关属性
+                currentPage: 1,
+                pageSize:10,
+                total:100,
+                queryString:null,
+            },
+            dataList: [],//列表数据
+            formData: {},//表单数据
+            // tableData:[],//新增和编辑表单中对应的检查项列表数据
+            // checkitemIds:[],//新增和编辑表单中检查项对应的复选框，基于双向绑定可以进行回显和数据提交
+            dialogFormVisible: false,//控制添加窗口显示/隐藏
+            dialogFormVisible4Edit:false//控制编辑窗口显示/隐藏
+        },
+        //加载页面即执行的函数
+        created() {
+           this.findPage();
+        },
+        methods: {
+            //编辑检查组
+            handleEdit() {
+                //添加检查组数据的方法(formData  勾选 checkitemIds)
+                // if(this.checkitemIds.length>0){
+                    axios.post("/tickets/updateGroupInfo?",this.formData).then((res)=>{
+                        if(res.data.flag){
+                            this.$message({
+                                type:'success',
+                                message: res.data.message
+                            });
+                        }else{
+                            this.$message.error(res.data.message);
+                        }
+                        this.dialogFormVisible4Edit= false;
+
+                        this.findPage();
+                    });
+                // }else{
+                //     this.$message({
+                //         message: '必须勾选检查项内容！',
+                //         type: 'warning'
+                //     });
+                //     return false;
+                // }
+            },
+            //添加
+            handleAdd () {
+               //添加检查组数据的方法(formData  勾选 checkitemIds)
+               //  if(this.checkitemIds.length>0){
+                    axios.post("/tickets/saveGroupInfo",this.formData).then((res)=>{
+                        if(res.data.flag){
+                            this.$message({
+                                type:'success',
+                                message: res.data.message
+                            });
+                        }else{
+                            this.$message.error(res.data.message);
+                        }
+                        this.dialogFormVisible= false;
+
+                        this.findPage();
+                    });
+                // }else{
+                //     this.$message({
+                //         message: '必须勾选检查项内容！',
+                //         type: 'warning'
+                //     });
+                //     return false;
+                // }
+            },
+            //分页查询
+            findPage() {
+                //编写分页查询js代码
+                //1:提供分页数据
+                var params={
+                    currentPage: this.pagination.currentPage,
+                    pageSize: this.pagination.pageSize,
+                    queryString: this.pagination.queryString
+                }
+                //2:发送异步请求
+                axios.post("/tickets/findPageInfo",params).then((res)=>{
+                    this.pagination.total = res.data.total;
+                    this.dataList = res.data.rows;
+                });
+            },
+            // 重置表单
+            resetForm() {
+                //第一个选项卡内容
+                this.formData = {};
+                //第二个选项卡勾选内容取消选中
+                // this.checkitemIds = [];
+                //锁定第一个选项卡
+                this.activeName = "first";
+            },
+            //弹出添加窗口
+            handleCreate() {
+                //弹出添加窗口
+                this.dialogFormVisible = true;
+                //重置表单
+                this.resetForm();
+                //回显所有的检查项的信息
+                //一般情况下，不带参数的查询会返回数据库中某张表的所有信息
+                // axios.post("/tickets/getAllItemInfo").then((res)=>{
+                //     this.tableData = res.data.data
+                // });
+            },
+            // 弹出编辑窗口
+            handleUpdate(row) {
+                //表单重置
+                this.resetForm();
+                //弹出编辑窗口
+                this.dialogFormVisible4Edit = true;
+
+                //第一个选项卡中表单信息
+                this.formData = row;
+                /*
+                * 1:显示所有的检查项信息
+                * 2:勾选符合该检查组的检查项信息
+                * */
+                //第二个选项卡
+                // axios.post("/tickets/getAllItemInfo").then((res)=>{
+                //     this.tableData = res.data.data
+                //     //获取符合该检查组的那些检查项的id
+                //     axios.post("/checkgroup/getCheckitemids?id="+row.id).then((res1)=>{
+                //           this.checkitemIds = res1.data.data;   // [3,4,5,68]
+                //     });
+                // });
+            },
+            //切换页码
+            handleCurrentChange(currentPage) {
+                this.pagination.currentPage = currentPage;
+                this.findPage();
+            },
+            // 删除
+            handleDelete(row) {
+                //异步删除检查组信息
+                //row 删除的当前行对象 row.id
+                this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    //执行删除操作
+                    axios.post('/tickets/deleteInfoById?id='+row.id).then((res)=>{
+                        if(res.data.flag){
+                            this.$message({
+                                type: 'success',
+                                message: '删除成功!'
+                            });
+                        }else{
+                            this.$message.error(res.data.message);
+                        }
+                        //一定要进行页面刷新
+                        this.findPage();
+                    });
+                }).catch(() => {
+                    //取消删除
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
+            }
+        }
+    })
+</script>
+</html>

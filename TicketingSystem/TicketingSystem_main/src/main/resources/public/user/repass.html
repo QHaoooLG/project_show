@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/layui/css/layui.css" rel="stylesheet">
+    <script src="/layui/layui.js"></script>
+    <script src="/js/funs.js"></script>
+    <style>
+        .layui-form {
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-form" lay-filter="myform">
+    <form>
+        <div class="layui-form-item">
+            <label class="layui-form-label">原密码</label>
+            <div class="layui-input-block">
+                <input autocomplete="off" class="layui-input" lay-verify="required" name="oldpass" placeholder="请输入原密码"
+                       type="password">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-block">
+                <input autocomplete="off" class="layui-input" lay-verify="required" name="newpass" placeholder="请输入新密码"
+                       type="password">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">确认新密码</label>
+            <div class="layui-input-block">
+                <input autocomplete="off" class="layui-input" lay-verify="required" name="confirmpass" placeholder="请再次输入新密码"
+                       type="password">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-filter="save" lay-submit="" type="submit">保存</button>
+
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+
+    var fm = new LayForm();
+    fm.loaded = function () {
+    }
+    fm.onSubmit = function (field) {
+        ajax_post("/User/updatepass", field, function (json) {
+            openAlert(json.msg);
+        })
+    }
+    fm.init();
+
+</script>
+</body>
+</html>

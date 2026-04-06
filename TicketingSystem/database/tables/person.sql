@@ -1,0 +1,10 @@
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('1', '1', '齐浩龙', '13864317069', 21);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('10', '3', '美对象', '12000000000', 20);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('2', '1', '齐爸', '15900000000', NULL);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('3', '1', '齐妈', '1500000000', NULL);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('4', '2', '刘孝宙', '15653303083', 20);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('5', '2', '刘爸', '15600000000', NULL);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('6', '2', '刘妈', '15600000000', NULL);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('7', '3', '小美', '12000000000', 20);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('8', '3', '美爸', '12000000000', NULL);
+INSERT INTO `person`(`id`, `user_id`, `name`, `phone`, `age`) VALUES ('9', '3', '美妈', '12000000000', NULL);

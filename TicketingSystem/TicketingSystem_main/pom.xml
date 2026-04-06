@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>Database_ClassDesign</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>TicketingSystem_main</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+        <!--
+        Spring 框架中的一个核心依赖，用于构建基于模型 - 视图 - 控制器（Model - View - Controller，MVC）模式的 Web 应用程序。它提供了一系列的组件和工具，帮助开发者处理 Web 请求、管理视图以及实现业务逻辑与展示逻辑的分离
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- springboot的web支持
+        用于在 Spring Boot 项目中构建 Web 应用程序。它是 Spring Boot 提供的一个 “起步依赖”（Starter Dependency），可以帮助开发者快速搭建一个基于 Spring 的 Web 应用，减少了手动配置各种依赖的繁琐过程
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--
+        用于在 Java 项目中引入阿里巴巴的 Druid 连接池。Druid 是一个高性能、功能强大的数据库连接池和监控组件，它能够帮助开发者更高效地管理数据库连接，提升应用程序性能和稳定性，同时提供丰富的监控和扩展功能
+        -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <!--
+        Apache POI 是一个用于操作 Microsoft Office 格式文件（如 Excel、Word、PowerPoint）的 Java API。poi - ooxml模块主要用于处理基于 Office Open XML（OOXML）标准的文件格式，如.xlsx（Excel 2007 及以上版本）、.docx（Word 2007 及以上版本）和.pptx（PowerPoint 2007 及以上版本）等
+        -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.14</version>
+            <!--            <version>4.1.2</version>-->
+        </dependency>
+
+        <!--    MtBatis-Plus Spring Boot2 配置-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <!--    MtBatis-Plus Maven bom 配置-->
+        <!-- jdk 8+ 引入可选模块 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-jsqlparser-4.9</artifactId>
+        </dependency>
+
+        <!--Mybatis-plus的代码生成器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
+        <!--添加 模板引擎 依赖，MyBatis-Plus 支持 Velocity（默认）、Freemarker、Beetl，用户可以选择自己熟悉的模板引擎，如果都不满足您的要求，可以采用自定义模板引擎-->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.3</version>
+        </dependency>
+
+<!--        IDEA自带的代码补全/生成插件，可以进行数据库中pojo对象等部分的自动生成 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!--
+        允许 Java 应用程序通过 JDBC（Java Database Connectivity） API 与 MySQL 数据库进行通信
+        MySQL 官方提供的一个 Java 数据库连接驱动
+        -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <!--            <version>5.1.47</version>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.7.3</version>
+        </dependency>
+
+
+    </dependencies>
+
+<!--    MtBatis-Plus Maven bom 配置-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-bom</artifactId>
+                <version>3.5.9</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
