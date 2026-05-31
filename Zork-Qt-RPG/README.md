@@ -1,24 +1,10 @@
-#  ZorkUL - 基于 Qt 的 Roguelike-RPG 游戏
-
-> “人们只有用心去看，才能看到真实。事物的真实本质是肉眼无法看到的。”
-> —— Antoine de Saint-Exupéry, 《小王子》
+#  Zork - 基于 Qt 的 Roguelike-RPG 游戏
 
 [![Platform](https://img.shields.io/badge/platform-Qt%205.14%2B-blue)]()
 [![Language](https://img.shields.io/badge/language-C%2B%2B17-orange)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
-**ZorkUL** 是一个由 C++ 和 Qt 框架构建的 Roguelike-RPG 游戏。玩家将扮演一名穿越到地牢世界的大学生，在充满随机道具和怪物的迷宫中生存、战斗并寻找回到现实的方法。
-
----
-
-##  目录
-
-- [项目概述](#-项目概述)
-- [核心功能](#-核心功能)
-- [游戏机制](#-游戏机制)
-- [项目结构](#-项目结构)
-- [安装与运行](#-安装与运行)
-- [贡献指南](#-贡献指南)
+**Zork** 是一个由 C++ 和 Qt 框架构建的 Roguelike-RPG 游戏。玩家将扮演一名穿越到地牢世界的大学生，在充满随机道具和怪物的迷宫中生存、战斗并寻找回到现实的方法。
 
 ---
 
@@ -72,7 +58,7 @@
 本项目的目录结构遵循 Qt 标准工程规范，清晰地分离了源代码与资源文件。
 
 ```text
-Qt_zoom/
+Zork-Qt-RPG/
 ├── sourceFile/          # 源代码文件夹
 │   ├── character.h      # 角色类定义
 │   ├── item.h           # 道具基类及派生类
