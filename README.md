@@ -10,7 +10,7 @@
 - **求职方向**：软件开发工程师 / 后端开发工程师 / C++ 或 Python 视觉算法工程相关岗位
 - **核心技能**：C++、Python、Java、ROS2、OpenCV、PyTorch、Spring Boot、MyBatis-Plus、MySQL、Qt、JUnit
 - **项目特点**：既有 RoboMaster 实车部署、相机接入和调试文档沉淀，也有可运行的视觉算法 demo、后端业务系统、桌面应用和测试工程
-- **简历附件**：[个人简历v6.pdf](./个人简历v6.pdf)
+- **简历附件**：[个人简历v9.pdf](./个人简历v9.pdf)
 - **联系方式**：`qhaooolg@foxmail.com` / 微信 `QHaoooLG`
 
 ## 快速阅读建议
