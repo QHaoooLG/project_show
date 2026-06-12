@@ -1,0 +1,31 @@
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Local datasets, models, and generated outputs
+data/*
+!data/README.md
+!data/.gitkeep
+outputs/*
+!outputs/README.md
+!outputs/.gitkeep
+*.pt
+*.pth
+*.onnx
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+

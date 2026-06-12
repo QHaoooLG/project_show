@@ -1,3 +1,38 @@
-# GitHub rejects files larger than 100 MB.
+# GitHub rejects regular Git files larger than 100 MB.
 CubiclePal_MVP_v0/桌宠功能展示.mp4
 
+# Local videos and generated media.
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+
+# Model checkpoints and generated ML outputs.
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.jsonl
+
+# Python / cache files.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Java / Node build outputs.
+target/
+build/
+dist/
+node_modules/
+
+# OS and editor noise.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
