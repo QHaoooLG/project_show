@@ -1,0 +1,18 @@
+*.iml
+.DS_Store
+
+# Local IDE and machine files
+.idea/
+local.properties
+/local.properties
+
+# Gradle and Android build outputs
+.gradle/
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_

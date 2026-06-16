@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/et_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="商品名称"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="商品价格"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_product_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:gravity="top"
+            android:hint="商品描述"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="商品分类"
+            android:textColor="@color/colorText"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_category_digital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数码产品"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_category_clothing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服饰鞋包"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_category_daily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日用百货"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_category_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="食品饮料"
+                android:textSize="15sp" />
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

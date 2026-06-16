@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".fragment.ProductSearchFragment">
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入商品名称、描述或分类关键词"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_filter_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="全部商品"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_search_by_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按关键词搜索"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_filter_digital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="筛选：数码产品"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_filter_clothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="筛选：服饰鞋包"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_filter_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="筛选：日用百货"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_filter_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="筛选：食品饮料"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:minHeight="46dp"
+        android:text="查询"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="暂无商品数据"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
