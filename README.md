@@ -1,15 +1,15 @@
 # 齐浩龙项目作品集
 
 > 面向求职投递的 GitHub 项目展示仓库。  
-> 重点展示我在 RoboMaster 机器人视觉、Python 计算机视觉、Java 后端、Python 桌面应用、C++/Qt 和软件测试方向的实践经历。
+> 重点展示我在 RoboMaster 机器人视觉、Python 计算机视觉、Java 后端、Android 原生应用、Python 桌面应用、C++/Qt 和软件测试方向的实践经历。
 
 ## 个人定位
 
-我是齐浩龙，山东理工大学计算机科学与技术专业本科生，2026 届应届生。项目经历主要集中在机器人视觉系统部署与调试、视觉算法原型开发、后端业务系统开发、桌面应用工程化和软件测试实践。
+我是齐浩龙，山东理工大学计算机科学与技术专业本科生，2026 届应届生。项目经历主要集中在机器人视觉系统部署与调试、视觉算法原型开发、后端业务系统开发、Android 原生应用、桌面应用工程化和软件测试实践。
 
-- **求职方向**：软件开发工程师 / 后端开发工程师 / C++ 或 Python 视觉算法工程相关岗位
-- **核心技能**：C++、Python、Java、ROS2、OpenCV、PyTorch、Spring Boot、MyBatis-Plus、MySQL、Qt、JUnit
-- **项目特点**：既有 RoboMaster 实车部署、相机接入和调试文档沉淀，也有可运行的视觉算法 demo、后端业务系统、桌面应用和测试工程
+- **求职方向**：软件开发工程师 / 后端开发工程师 / Android 开发工程师 / C++ 或 Python 视觉算法工程相关岗位
+- **核心技能**：C++、Python、Java、Android、SQLite、ROS2、OpenCV、PyTorch、Spring Boot、MyBatis-Plus、MySQL、Qt、JUnit
+- **项目特点**：既有 RoboMaster 实车部署、相机接入和调试文档沉淀，也有可运行的视觉算法 demo、后端业务系统、Android 应用、桌面应用和测试工程
 - **简历附件**：[个人简历v9.pdf](./个人简历v9.pdf)
 - **联系方式**：`qhaooolg@foxmail.com` / 微信 `QHaoooLG`
 
@@ -22,6 +22,7 @@
 | 机器人视觉 / C++ / ROS2 | [RM-QIQI-vision-main](./RM-QIQI-vision-main) | ROS2 工作空间部署、Hikvision 工业相机接入、Foxglove 调试、实车联调和团队技术文档 |
 | 视觉算法 / Python / PyTorch | [rm_energy_segmentation](./rm_energy_segmentation) | RoboMaster 能量机关实例分割、伪 mask、Tiny U-Net、模块参数估计和自动化测试 |
 | Java 后端开发 | [TicketingSystem](./TicketingSystem) | Spring Boot + MyBatis-Plus 分层结构、票务业务建模、Controller/Service/Mapper 实现 |
+| Android / 移动端开发 | [ShopOnline_android](./ShopOnline_android) | Android 原生 Java、SQLiteOpenHelper、SharedPreferences、RecyclerView、商品 CRUD 和搜索筛选 |
 | Python 桌面应用 | [CubiclePal_MVP_v0](./CubiclePal_MVP_v0) | PyQt5 桌面助手、任务管理、OpenCV 隐私检测、SQLite 数据管理 |
 | C++/Qt 基础工程 | [Zork-Qt-RPG](./Zork-Qt-RPG) | Qt Widgets、OOP 建模、游戏状态管理、道具与战斗系统 |
 | 软件测试 / 质量保障 | [SoftwareTest](./SoftwareTest) | JUnit 单元测试、边界值分析、等价类划分、排序/搜索/日期逻辑测试 |
@@ -33,6 +34,7 @@
 | [RM-QIQI-vision-main](./RM-QIQI-vision-main) | RoboMaster 机器人视觉部署 | C++、ROS2、OpenCV、Foxglove、Hikvision SDK | 负责视觉自瞄系统部署、相机接入验证、参数调试、实车联调和技术传承文档整理 | [README](./RM-QIQI-vision-main/README.md)、[视觉避坑手册](./RM-QIQI-vision-main/QIQI视觉避坑手册.pdf)、[演示视频](./RM-QIQI-vision-main/开源机器人自瞄项目部署效果实录.mp4) |
 | [rm_energy_segmentation](./rm_energy_segmentation) | RoboMaster 能量机关实例分割 | Python、PyTorch、OpenCV、Tiny U-Net、Gauss-Newton | 将能量机关视频识别整理为开源结构，实现抽帧、伪标签、训练、推理、语义后处理和模块参数估计闭环 | [README](./rm_energy_segmentation/README.md)、[系统设计](./rm_energy_segmentation/docs/system_design.md)、[测试入口](./rm_energy_segmentation/scripts/run_tests.py) |
 | [TicketingSystem](./TicketingSystem) | Java 后端 / 景区票务管理 | Java、Spring Boot、MyBatis-Plus、MySQL、Maven | 构建景区票务管理系统，覆盖用户、景点、票种、预约、订单、支付等业务模块 | [README](./TicketingSystem/README.md)、[主模块源码](./TicketingSystem/TicketingSystem_main/src/main/java/com/sdut) |
+| [ShopOnline_android](./ShopOnline_android) | Android 本地商品管理 | Java、Android View、Material Components、RecyclerView、SQLite、SharedPreferences | 重构本地商品管理 Demo，实现注册登录、密码哈希、商品增删改查、关键词搜索、分类筛选和多用户数据隔离 | [README](./ShopOnline_android/README.md)、[核心源码](./ShopOnline_android/app/src/main/java/com/example/shoponline_android)、[数据库模块](./ShopOnline_android/app/src/main/java/com/example/shoponline_android/db/DatabaseHelper.java) |
 | [CubiclePal_MVP_v0](./CubiclePal_MVP_v0) | Python 桌面智能助手 | Python、PyQt5、OpenCV、SQLite、PyYAML | 设计 MVP 架构，实现桌面宠物、任务管理、隐私保护、出行规划、对话窗口和测试脚本 | [README](./CubiclePal_MVP_v0/README.md)、[项目文档](./CubiclePal_MVP_v0/doc/README.md) |
 | [Zork-Qt-RPG](./Zork-Qt-RPG) | C++/Qt 游戏开发 | C++17、Qt Widgets、qmake | 实现房间地图、角色状态、道具系统、怪物战斗、随机传送和 Qt 弹窗交互 | [README](./Zork-Qt-RPG/README.md)、[源码](./Zork-Qt-RPG/sourceFile) |
 | [SoftwareTest](./SoftwareTest) | 软件测试 / 自动化测试 | Java、JUnit、Maven | 针对排序、搜索、日期计算、立方体体积等逻辑编写单元测试、边界值和等价类测试 | [README](./SoftwareTest/README.md)、[A1 测试代码](./SoftwareTest/SoftwareTest_1/softwareTest_A1code/src/test/java)、[A2 测试代码](./SoftwareTest/SoftwareTest_2/softwareTest_A2code/src/test/java) |
@@ -44,6 +46,7 @@
 | ROS2 机器人视觉部署 | [RM-QIQI-vision-main/src](./RM-QIQI-vision-main/src) | 包含 `rm_vision`、Hikvision 相机节点、Foxglove bridge、bringup 配置等部署与调试材料 |
 | 视觉算法原型开发 | [rm_energy_segmentation/rmvs](./rm_energy_segmentation/rmvs) | 包含数据集扫描、伪 mask 生成、Tiny U-Net、推理后处理、圆拟合和可视化模块 |
 | 后端业务系统开发 | [TicketingSystem/TicketingSystem_main](./TicketingSystem/TicketingSystem_main) | 包含 Controller、Service、Mapper、POJO、DTO、配置和前端静态资源 |
+| Android 原生应用开发 | [ShopOnline_android/app/src/main](./ShopOnline_android/app/src/main) | 包含 Activity、Fragment、RecyclerView Adapter、SQLiteOpenHelper、Repository、登录状态和输入校验工具 |
 | 桌面应用工程化 | [CubiclePal_MVP_v0/src](./CubiclePal_MVP_v0/src) | 包含 `ai`、`core`、`ui`、`utils` 分层，以及配置、数据和测试脚本 |
 | C++/Qt 面向对象设计 | [Zork-Qt-RPG/sourceFile](./Zork-Qt-RPG/sourceFile) | 包含角色、房间、怪物、道具、战斗判定和 Qt 界面交互 |
 | 软件测试设计 | [SoftwareTest](./SoftwareTest) | 包含 JUnit 测试、边界值分析、等价类测试和课程测试报告 |
@@ -118,7 +121,40 @@ TicketingSystem 是一个 Java/Maven 多模块项目，围绕景区票务业务�
 - Mapper 层：[mapper](./TicketingSystem/TicketingSystem_main/src/main/java/com/sdut/mapper)
 - 配置文件：[application.yml](./TicketingSystem/TicketingSystem_main/src/main/resources/application.yml)
 
-### 4. CubiclePal_MVP_v0：桌面智能助手 MVP
+### 4. ShopOnline_android：Android 本地商品管理 Demo
+
+ShopOnline_android 是一个基于 Android 原生 Java + SQLite 的本地商品管理 Demo。项目围绕简易电商后台/商品台账场景设计，重点展示 Android 基础页面开发、本地数据持久化、RecyclerView 列表交互、登录状态保存和多用户数据隔离能力。
+
+**核心功能**
+
+- 用户注册与登录：用户名唯一校验、密码基础校验，登录状态通过 SharedPreferences 保存。
+- 密码存储优化：注册时写入 SHA-256 哈希，避免在 SQLite 中保存明文密码。
+- 商品管理：维护商品名称、描述、分类、价格、创建时间和所属用户。
+- 商品列表交互：基于 RecyclerView 展示商品卡片，并支持编辑、删除等操作。
+- 查询筛选：支持按商品名称、描述、分类进行关键词搜索，也支持固定分类筛选。
+- 数据隔离：商品查询、编辑和删除均带有当前用户 ID 条件，避免不同用户数据混用。
+
+**技术与结构**
+
+- `activity/`：登录、注册页面。
+- `fragment/`：新增商品、商品列表、商品查询。
+- `adapter/`：商品列表 RecyclerView 适配器。
+- `db/`：`SQLiteOpenHelper` 与 CRUD。
+- `data/`：`ShopRepository`，封装业务访问。
+- `utils/`：登录状态、密码哈希和输入校验工具。
+
+**可验证内容**
+
+- 项目说明：[ShopOnline_android/README.md](./ShopOnline_android/README.md)
+- Android 主模块：[app](./ShopOnline_android/app)
+- 登录与注册：[activity](./ShopOnline_android/app/src/main/java/com/example/shoponline_android/activity)
+- 商品页面：[fragment](./ShopOnline_android/app/src/main/java/com/example/shoponline_android/fragment)
+- 数据库实现：[DatabaseHelper.java](./ShopOnline_android/app/src/main/java/com/example/shoponline_android/db/DatabaseHelper.java)
+- Repository 层：[ShopRepository.java](./ShopOnline_android/app/src/main/java/com/example/shoponline_android/data/ShopRepository.java)
+
+> 说明：该项目是本地单机商品管理应用，不包含远程服务端、真实下单、支付、物流或库存同步能力。它更适合作为 Android 原生开发、SQLite 数据持久化和基础交互工程的展示项目。
+
+### 5. CubiclePal_MVP_v0：桌面智能助手 MVP
 
 CubiclePal 是一个 Python 桌面智能助手项目，目标是把桌面宠物、任务管理、隐私保护和出行规划组合成一个可运行的办公辅助工具。
 
@@ -138,7 +174,7 @@ CubiclePal 是一个 Python 桌面智能助手项目，目标是把桌面宠物�
 - 数据与配置：[database.py](./CubiclePal_MVP_v0/src/utils/database.py)、[config.yaml](./CubiclePal_MVP_v0/resource/config.yaml)
 - 测试与演示：[test](./CubiclePal_MVP_v0/test)
 
-### 5. Zork-Qt-RPG：基于 Qt 的 Roguelike RPG 游戏
+### 6. Zork-Qt-RPG：基于 Qt 的 Roguelike RPG 游戏
 
 Zork-Qt-RPG 是一个 C++/Qt 项目，适合展示面向对象设计、GUI 事件处理和游戏状态管理能力。
 
@@ -157,7 +193,7 @@ Zork-Qt-RPG 是一个 C++/Qt 项目，适合展示面向对象设计、GUI 事�
 - 战斗判定：[Judge.cpp](./Zork-Qt-RPG/sourceFile/Judge.cpp)
 - UI 交互：[mainwindow.cpp](./Zork-Qt-RPG/sourceFile/mainwindow.cpp)
 
-### 6. SoftwareTest：软件测试工程实践
+### 7. SoftwareTest：软件测试工程实践
 
 SoftwareTest 用于展示基础测试方法和 JUnit 自动化测试实践，分为两个阶段：
 
@@ -187,4 +223,3 @@ SoftwareTest 用于展示基础测试方法和 JUnit 自动化测试实践，分
 - 部分项目来自课程设计、竞赛部署或开源项目集成实践，因此每个子目录保留了不同阶段的代码、报告、文档和演示材料。
 - 部分大型视频、模型权重或数据集不适合直接纳入 Git 历史，仓库优先保留代码、README、截图、轻量文档和可复现实验入口。
 - 对招聘方而言，建议重点关注：我的职责是否清晰、代码结构是否可读、项目文档是否能说明问题、以及经历是否与目标岗位匹配。
-
