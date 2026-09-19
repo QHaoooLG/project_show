@@ -15,6 +15,10 @@ CubiclePal_MVP_v0/桌宠功能展示.mp4
 *.ckpt
 *.jsonl
 
+# Vendored third-party clone, kept locally but never versioned
+# (it has its own .git, so committing it only produced a broken gitlink).
+RM-QIQI-vision-main/src/ros-foxglove-bridge/
+
 # Python / cache files.
 __pycache__/
 *.py[cod]
