@@ -1,7 +1,7 @@
 # 齐浩龙项目作品集
 
 > 面向求职投递的 GitHub 项目展示仓库。  
-> 重点展示我在 RoboMaster 机器人视觉、Python 计算机视觉、Java 后端、Android 原生应用、Python 桌面应用、C++/Qt 和软件测试方向的实践经历。
+> 重点展示我在 RoboMaster 机器人视觉、Python 计算机视觉、Java 后端、Android 原生应用、Python 桌面应用、C++/Qt、软件测试和 Go 命令行工具方向的实践经历。
 
 ## 个人定位
 
@@ -26,6 +26,8 @@
 | Python 桌面应用 | [CubiclePal_MVP_v0](./CubiclePal_MVP_v0) | PyQt5 桌面助手、任务管理、OpenCV 隐私检测、SQLite 数据管理 |
 | C++/Qt 基础工程 | [Zork-Qt-RPG](./Zork-Qt-RPG) | Qt Widgets、OOP 建模、游戏状态管理、道具与战斗系统 |
 | 软件测试 / 质量保障 | [SoftwareTest](./SoftwareTest) | JUnit 单元测试、边界值分析、等价类划分、排序/搜索/日期逻辑测试 |
+| 游戏行业相关岗位 | [游戏岗相关](./游戏岗相关) | 多平台游玩时长与成就数据统计，以及对《明日方舟：终末地》的十维度系统评价与版本问卷建议 |
+| 开发工具链 / Go CLI | [codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper)（独立仓库） | 跨平台 Codex CLI 安装引导、幂等与可验证的安装流程、安装包完整性校验、E001–E013 错误码体系 |
 
 ## 项目一览
 
@@ -38,6 +40,7 @@
 | [CubiclePal_MVP_v0](./CubiclePal_MVP_v0) | Python 桌面智能助手 | Python、PyQt5、OpenCV、SQLite、PyYAML | 设计 MVP 架构，实现桌面宠物、任务管理、隐私保护、出行规划、对话窗口和测试脚本 | [README](./CubiclePal_MVP_v0/README.md)、[项目文档](./CubiclePal_MVP_v0/doc/README.md) |
 | [Zork-Qt-RPG](./Zork-Qt-RPG) | C++/Qt 游戏开发 | C++17、Qt Widgets、qmake | 实现房间地图、角色状态、道具系统、怪物战斗、随机传送和 Qt 弹窗交互 | [README](./Zork-Qt-RPG/README.md)、[源码](./Zork-Qt-RPG/sourceFile) |
 | [SoftwareTest](./SoftwareTest) | 软件测试 / 自动化测试 | Java、JUnit、Maven | 针对排序、搜索、日期计算、立方体体积等逻辑编写单元测试、边界值和等价类测试 | [README](./SoftwareTest/README.md)、[A1 测试代码](./SoftwareTest/SoftwareTest_1/softwareTest_A1code/src/test/java)、[A2 测试代码](./SoftwareTest/SoftwareTest_2/softwareTest_A2code/src/test/java) |
+| [codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper) | 开发环境自动化 / 跨平台 CLI 工具 | Go 1.22+、Windows 11 / Ubuntu / Debian、SHA-256 与 Authenticode 校验、MIT | 独立仓库项目：把 Codex CLI 的安装做成幂等、可验证、可诊断的引导流程，含环境探测、按需安装、安装后 PATH 复核与稳定错误码 | [项目主页](https://github.com/QHaoooLG/codex-bootstrapper)、[项目 README](https://github.com/QHaoooLG/codex-bootstrapper#readme) |
 
 ## 能力映射
 
@@ -50,6 +53,7 @@
 | 桌面应用工程化 | [CubiclePal_MVP_v0/src](./CubiclePal_MVP_v0/src) | 包含 `ai`、`core`、`ui`、`utils` 分层，以及配置、数据和测试脚本 |
 | C++/Qt 面向对象设计 | [Zork-Qt-RPG/sourceFile](./Zork-Qt-RPG/sourceFile) | 包含角色、房间、怪物、道具、战斗判定和 Qt 界面交互 |
 | 软件测试设计 | [SoftwareTest](./SoftwareTest) | 包含 JUnit 测试、边界值分析、等价类测试和课程测试报告 |
+| 开发环境自动化 / 跨平台 CLI | [codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper)（独立仓库） | 包含环境探测、Node.js 与 Codex CLI 按需安装、PATH 复核、安装包 SHA-256 与 Authenticode 校验、错误码与日志规范 |
 
 ## 重点项目
 
@@ -208,6 +212,38 @@ SoftwareTest 用于展示基础测试方法和 JUnit 自动化测试实践，分
 - A2 测试：[src/test/java](./SoftwareTest/SoftwareTest_2/softwareTest_A2code/src/test/java/qhaooolg/softwareTest_A2code)
 - 测试报告文档：[A1 报告](./SoftwareTest/SoftwareTest_1/softwareTest_A1_report.doc)、[A2 报告](./SoftwareTest/SoftwareTest_2/Report_Assignment%202%20Part%202%202024.doc)
 
+### 8. codex-bootstrapper：跨平台 Codex CLI 安装引导程序（独立仓库）
+
+> 项目主页：[github.com/QHaoooLG/codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper) —— 该项目位于**独立仓库**，本节只做索引与要点摘录，点击链接可直接跳转到项目页面。
+
+codex-bootstrapper 是一个用 Go 编写的跨平台安装引导程序：在一台干净机器上手动装好 Codex CLI，需要「装 Node.js → 确认 npm 可用 → 让新终端能找到它 → 再装 Codex」一连串容易出错的步骤，该项目把这些步骤做成一次可重复、可验证、失败时可诊断的操作，支持 Windows 11 amd64、Ubuntu amd64 与 Debian amd64。
+
+**设计要点**
+
+- **幂等**：已就绪的组件不会被动，重复运行会明确报告「未做任何变化」。
+- **可验证**：安装后按「新终端会看到的 PATH」复核，避免出现「报告成功但新终端找不到命令」的假成功。
+- **可诊断**：每个失败都有稳定错误码（`E001`–`E013`）、对应退出码、可执行建议，以及一份落盘日志。
+- **完整性优先**：Node.js 安装包必须同时通过官方 SHA-256 与 Authenticode 代码签名校验（发布者须为 OpenJS / Node.js Foundation），且不提供跳过校验的参数。
+- **不碰敏感信息**：不收集 API Key、不写认证文件、不自动登录；`check` 子命令严格只读，不创建日志、缓存或状态文件。
+- **输出契约明确**：进度写 stderr、最终报告写 stdout；非 TTY、CI 或重定向场景只输出固定文本行，不含 ANSI 转义与回车符。
+- **可审计的安装路径**：Linux 侧使用 NodeSource 官方仓库 + 专用 GPG keyring + `signed-by` 作用域，不执行 `curl … | sudo bash`。
+
+**可验证内容**
+
+- 项目完整说明：[codex-bootstrapper README](https://github.com/QHaoooLG/codex-bootstrapper#readme)
+- 错误码与退出码表：[错误码章节](https://github.com/QHaoooLG/codex-bootstrapper#错误码与退出码)
+- 配置与环境变量：[配置章节](https://github.com/QHaoooLG/codex-bootstrapper#配置)
+- 许可与构建：MIT License；交叉构建与打包脚本见项目内 `scripts/package.ps1`
+
+> 说明：该项目不在本仓库内，本仓库不包含其源码与构建产物，README 中的相关链接均直接跳转到上述独立仓库。
+
+## 游戏岗补充材料
+
+`游戏岗相关/` 目录存放面向**游戏行业岗位**的补充材料，用于展示对游戏系统与数值/玩法设计的结构化理解和反馈表达能力（属文字材料，非代码项目）：
+
+- [游戏生涯概要汇总.md](./游戏岗相关/游戏生涯概要汇总.md)：Steam、米哈游（崩坏：星穹铁道 / 绝区零 / 原神）、库洛（鸣潮）、鹰角网络（明日方舟 / 终末地）与腾讯各平台账号的游玩时长、收集度与成就数据统计。
+- [明日方舟终末地模拟问卷反馈.md](./游戏岗相关/明日方舟终末地模拟问卷反馈.md)：对《明日方舟：终末地》的十维度评分（剧情、角色养成、战斗、美术、音效、内容量、社交、运营、付费、性能）、自由评价区，以及 1.2 版本问卷建议汇总。
+
 ## 荣誉与经历摘要
 
 - RoboMaster 齐奇战队算法组组长，负责视觉/算法方向研发推进、实车调试与成员培养。
@@ -222,4 +258,5 @@ SoftwareTest 用于展示基础测试方法和 JUnit 自动化测试实践，分
 - 本仓库主要用于求职投递时集中展示项目经历，不是单一产品仓库。
 - 部分项目来自课程设计、竞赛部署或开源项目集成实践，因此每个子目录保留了不同阶段的代码、报告、文档和演示材料。
 - 部分大型视频、模型权重或数据集不适合直接纳入 Git 历史，仓库优先保留代码、README、截图、轻量文档和可复现实验入口。
+- `codex-bootstrapper` 位于**独立仓库**（[github.com/QHaoooLG/codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper)），本仓库不包含其源码，README 中的相关链接会跳转到该项目主页。
 - 对招聘方而言，建议重点关注：我的职责是否清晰、代码结构是否可读、项目文档是否能说明问题、以及经历是否与目标岗位匹配。
