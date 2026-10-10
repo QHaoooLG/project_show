@@ -1,7 +1,7 @@
 # 齐浩龙项目作品集
 
 > 面向求职投递的 GitHub 项目展示仓库。  
-> 重点展示我在 RoboMaster 机器人视觉、Python 计算机视觉、Java 后端、Android 原生应用、Python 桌面应用、C++/Qt、软件测试和 Go 命令行工具方向的实践经历。
+> 重点展示我在 RoboMaster 机器人视觉、Python 计算机视觉、Java 后端、Android 原生应用、Python 桌面应用、Python 网络协议与实时数据处理、Vue 3 前端、C++/Qt、软件测试和 Go 命令行工具方向的实践经历。
 
 ## 个人定位
 
@@ -28,6 +28,7 @@
 | 软件测试 / 质量保障 | [SoftwareTest](./SoftwareTest) | JUnit 单元测试、边界值分析、等价类划分、排序/搜索/日期逻辑测试 |
 | 游戏行业相关岗位 | [游戏岗相关](./游戏岗相关) | 多平台游玩时长与成就数据统计，以及对《明日方舟：终末地》的十维度系统评价与版本问卷建议 |
 | 开发工具链 / Go CLI | [codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper)（独立仓库） | 跨平台 Codex CLI 安装引导、幂等与可验证的安装流程、安装包完整性校验、E001–E013 错误码体系 |
+| 直播数据处理 / Python 工具链 | [LiveDanmakuExtractor](https://github.com/QHaoooLG/LiveDanmakuExtractor)（独立仓库） | 自实现 B 站直播协议栈、多房间并发采集与断线重连、JSONL/CSV/TXT/SQLite 四路落盘、实时 Web 面板与本地分析 |
 
 ## 项目一览
 
@@ -41,6 +42,7 @@
 | [Zork-Qt-RPG](./Zork-Qt-RPG) | C++/Qt 游戏开发 | C++17、Qt Widgets、qmake | 实现房间地图、角色状态、道具系统、怪物战斗、随机传送和 Qt 弹窗交互 | [README](./Zork-Qt-RPG/README.md)、[源码](./Zork-Qt-RPG/sourceFile) |
 | [SoftwareTest](./SoftwareTest) | 软件测试 / 自动化测试 | Java、JUnit、Maven | 针对排序、搜索、日期计算、立方体体积等逻辑编写单元测试、边界值和等价类测试 | [README](./SoftwareTest/README.md)、[A1 测试代码](./SoftwareTest/SoftwareTest_1/softwareTest_A1code/src/test/java)、[A2 测试代码](./SoftwareTest/SoftwareTest_2/softwareTest_A2code/src/test/java) |
 | [codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper) | 开发环境自动化 / 跨平台 CLI 工具 | Go 1.22+、Windows 11 / Ubuntu / Debian、SHA-256 与 Authenticode 校验、MIT | 独立仓库项目：把 Codex CLI 的安装做成幂等、可验证、可诊断的引导流程，含环境探测、按需安装、安装后 PATH 复核与稳定错误码 | [项目主页](https://github.com/QHaoooLG/codex-bootstrapper)、[项目 README](https://github.com/QHaoooLG/codex-bootstrapper#readme) |
+| [LiveDanmakuExtractor](https://github.com/QHaoooLG/LiveDanmakuExtractor) | 直播弹幕采集与分析 / Python 工具 | Python 3.10+、click、httpx、websockets、FastAPI + uvicorn、Vue 3 + Vite、SQLite、MIT | 独立仓库项目（bili-danmaku）：自实现 B 站直播协议栈，支持多房间并发采集、四种格式落盘、Web 面板实时查看与历史复盘、标记切片、词云与 SC 统计告警 | [项目主页](https://github.com/QHaoooLG/LiveDanmakuExtractor)、[项目 README](https://github.com/QHaoooLG/LiveDanmakuExtractor#readme) |
 
 ## 能力映射
 
@@ -54,6 +56,7 @@
 | C++/Qt 面向对象设计 | [Zork-Qt-RPG/sourceFile](./Zork-Qt-RPG/sourceFile) | 包含角色、房间、怪物、道具、战斗判定和 Qt 界面交互 |
 | 软件测试设计 | [SoftwareTest](./SoftwareTest) | 包含 JUnit 测试、边界值分析、等价类测试和课程测试报告 |
 | 开发环境自动化 / 跨平台 CLI | [codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper)（独立仓库） | 包含环境探测、Node.js 与 Codex CLI 按需安装、PATH 复核、安装包 SHA-256 与 Authenticode 校验、错误码与日志规范 |
+| 网络协议实现与实时数据处理 | [LiveDanmakuExtractor](https://github.com/QHaoooLG/LiveDanmakuExtractor)（独立仓库） | 包含自实现 B 站直播协议栈（压缩包递归拆解、风控签名）、房间解析与握手心跳、多房间并发采集与断线重连、多路落盘与本地统计分析 |
 
 ## 重点项目
 
@@ -237,6 +240,31 @@ codex-bootstrapper 是一个用 Go 编写的跨平台安装引导程序：在一
 
 > 说明：该项目不在本仓库内，本仓库不包含其源码与构建产物，README 中的相关链接均直接跳转到上述独立仓库。
 
+### 9. LiveDanmakuExtractor（bili-danmaku）：B 站直播弹幕采集与分析工具（独立仓库）
+
+> 项目主页：[github.com/QHaoooLG/LiveDanmakuExtractor](https://github.com/QHaoooLG/LiveDanmakuExtractor) —— 该项目位于**独立仓库**，本节只做索引与要点摘录，点击链接可直接跳转到项目页面。
+
+bili-danmaku 是一个只做「弹幕数据面」的 B 站直播采集工具：连上直播间实时抓取**弹幕正文与 SC（Super Chat）**，一边落盘（JSONL / CSV / TXT / SQLite 四种格式同时写出），一边在浏览器里实时查看；历史弹幕可翻页复盘、打标记切片，也能在本地做词频与异常分析。项目自己实现 B 站直播协议栈（含压缩包递归拆解与风控签名），不依赖第三方弹幕库。
+
+**设计要点**
+
+- **协议自带**：房间解析 → token → 握手 → 心跳 → 采样全链路自实现，`probe` 子命令即为协议自检入口，是排障第一步。
+- **采集范围明确**：默认只采集「有用户文字内容」的事件（弹幕正文与 SC 正文），进房、关注、上舰、礼物、点赞等不落盘；被过滤的事件仍会接收并计入统计中的「过滤」计数，不做无声丢弃，协议调试时可用 `--all-events` 一并落盘。
+- **多路落盘**：JSONL 保留全部字段并按小时轮转，CSV 带 UTF-8 BOM 可直接用 Excel 打开，TXT 为 `[HH:MM:SS] 昵称: 内容` 纯弹幕行，SQLite（`danmaku.db`）作为面板与统计的数据来源。
+- **实时 Web 面板**：Vite + Vue 3 前端，支持实时弹幕流、类型与关键词过滤、高额 SC 横幅提示、位置分布统计、历史翻页复盘与时间轴跳转、打标记并按标记区间导出；服务端支持后台常驻（`web start` / `status` / `logs` / `stop`）。
+- **配置分层**：优先级为「命令行参数 > 环境变量 > 配置文件 > 内置默认值」，`config.toml` 与 `.env.example` 可直接复制使用。
+- **隐私与合规优先**：凭据默认只写本机 `.secrets/cookies.json`（已 gitignore、权限收紧），设置 `BILI_SESSDATA` 则完全留在内存；日志统一脱敏，项目不含任何上传逻辑；`--anonymize` 可输出脱敏数据（uid 哈希、昵称掩码），`purge` 可一键清除凭据；README 明确声明仅用于个人学习、研究或自有直播间运营分析等授权场景。
+
+**可验证内容**
+
+- 项目完整说明：[LiveDanmakuExtractor README](https://github.com/QHaoooLG/LiveDanmakuExtractor#readme)
+- 命令与用法（`login` / `probe` / `grab` / `web` / `stats` / `export` / `replay` / `wordcloud` / `sc`）：[使用章节](https://github.com/QHaoooLG/LiveDanmakuExtractor#使用)
+- 数据产物与配置：[数据产物](https://github.com/QHaoooLG/LiveDanmakuExtractor#数据产物)、[配置](https://github.com/QHaoooLG/LiveDanmakuExtractor#配置)
+- 隐私与合规声明：[隐私与合规](https://github.com/QHaoooLG/LiveDanmakuExtractor#隐私与合规)
+- 许可：MIT License © 2026 QHaoooLG and bili-danmaku contributors
+
+> 说明：该项目不在本仓库内，本仓库不包含其源码与构建产物，README 中的相关链接均直接跳转到上述独立仓库。
+
 ## 游戏岗补充材料
 
 `游戏岗相关/` 目录存放面向**游戏行业岗位**的补充材料，用于展示对游戏系统与数值/玩法设计的结构化理解和反馈表达能力（属文字材料，非代码项目）：
@@ -258,5 +286,5 @@ codex-bootstrapper 是一个用 Go 编写的跨平台安装引导程序：在一
 - 本仓库主要用于求职投递时集中展示项目经历，不是单一产品仓库。
 - 部分项目来自课程设计、竞赛部署或开源项目集成实践，因此每个子目录保留了不同阶段的代码、报告、文档和演示材料。
 - 部分大型视频、模型权重或数据集不适合直接纳入 Git 历史，仓库优先保留代码、README、截图、轻量文档和可复现实验入口。
-- `codex-bootstrapper` 位于**独立仓库**（[github.com/QHaoooLG/codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper)），本仓库不包含其源码，README 中的相关链接会跳转到该项目主页。
+- `codex-bootstrapper` 与 `LiveDanmakuExtractor` 位于**独立仓库**（[codex-bootstrapper](https://github.com/QHaoooLG/codex-bootstrapper)、[LiveDanmakuExtractor](https://github.com/QHaoooLG/LiveDanmakuExtractor)），本仓库不包含它们的源码与构建产物，README 中的相关链接会跳转到对应项目主页。
 - 对招聘方而言，建议重点关注：我的职责是否清晰、代码结构是否可读、项目文档是否能说明问题、以及经历是否与目标岗位匹配。
